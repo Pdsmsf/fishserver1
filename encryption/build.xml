@@ -1,0 +1,39 @@
+<project name="js压缩" default="compress" basedir=".">
+	<!-- ant  -d -v -f build.xml  -->
+    <description>
+         前端js压缩，使用uglifyjs压缩当前目录里的所有js文件，
+      压缩后，会将原文件替换为压缩过的文件。
+    </description>
+    
+  <!-- set global properties for this build -->
+  <!-- 项目根目录 -->
+  <property name="root" location="../account_server" />
+  
+  <!-- js文件压缩后的前缀，比如prefix=.min.js,生成*.min.js -->
+  <property name="suffix"  value=".js"/>
+  
+  <!-- node.js npm的路径 用npm root -g 命令查看 -->
+  <property name="npm"  value="C:\Users\Administrator\AppData\Roaming\npm"/>
+
+
+  <target name="compress" description="压缩" >
+		<echo>开始压缩js文件 "${root}" </echo>
+		<apply executable="${npm}\uglifyjs.cmd" dest="${root}" force="true" verbose="true">
+			
+			<srcfile/>
+	  	<arg value="-m"/>
+	  	<arg value="-c"/>
+	  	<arg line="-o"/>
+      <targetfile/>
+      <fileset dir="${root}">
+                 <filename name="**/*.js"/>
+      </fileset>
+     <mapper type="glob" from="*.js" to="*${suffix}"/>
+		</apply>
+    
+    
+    <echo>压缩结束</echo>
+  </target>
+
+
+</project>
