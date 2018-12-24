@@ -1,0 +1,807 @@
+account server is listening on 9000
+dealer api is listening on 127.0.0.1:12581
+client service is listening on port 9001
+room service is listening on 127.0.0.1:9002
+game server is listening on 127.0.0.1:9003
+game server is listening on 9999
+The port【9003】 is available.
+game server registered.
+	id:127.0.0.1:9999
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:9999
+127.0.0.1:9999
+ba8f4458fe079c77ccec8f992096a016
+account===========================guest_1539704291669
+SELECT U.userid,U.account,U.name,U.headimg,U.lv,U.exp,U.coins,U.vip,U.money,U.gems,U.roomid,U.RenameCount,U.ReHeadCount,P.propId,P.ice FROM t_users U LEFT JOIN t_property P ON U.userid = P.userid WHERE U.account = "guest_1539704291669"
+(node:17196) [DEP0095] DeprecationWarning: timers.enroll() is deprecated. Please use setTimeout instead.
+(node:17196) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+null
+1354
+INSERT INTO t_users(account,name,coins,gems,sex,headimg,power,RenameCount,ReHeadCount) VALUES("guest_1539704291669","MTM1NA==",10000,10000,0,1,0,0,0)
+(node:17196) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+INSERT INTO t_property(userid,ice) VALUES(96,5)
+account===========================guest_1539704291669
+SELECT U.userid,U.account,U.name,U.headimg,U.lv,U.exp,U.coins,U.vip,U.money,U.gems,U.roomid,U.RenameCount,U.ReHeadCount,P.propId,P.ice FROM t_users U LEFT JOIN t_property P ON U.userid = P.userid WHERE U.account = "guest_1539704291669"
+RowDataPacket {
+  userid: 96,
+  account: 'guest_1539704291669',
+  name: '1354',
+  headimg: '1',
+  lv: 1,
+  exp: 0,
+  coins: 10000,
+  vip: 0,
+  money: null,
+  gems: 10000,
+  roomid: null,
+  RenameCount: 0,
+  ReHeadCount: 0,
+  propId: 37,
+  ice: 5 }
+{ account: 'guest_1539704291669',
+  userid: 96,
+  name: '1354',
+  headimg: '1',
+  lv: 1,
+  exp: 0,
+  coins: 10000,
+  vip: 0,
+  money: null,
+  gems: 10000,
+  ip: '127.0.0.1',
+  sex: undefined,
+  RenameCount: 0,
+  ReHeadCount: 0,
+  item: { ice: 5 } }
+SELECT userid,account,name,headimg,lv,exp,coins,vip,gems,roomid,RenameCount,ReHeadCount FROM                t_users WHERE account = "guest_1539704291669"
+dbname=========================MTM1NA==
+没有空房间
+(node:17198) [DEP0095] DeprecationWarning: timers.enroll() is deprecated. Please use setTimeout instead.
+(node:17198) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,baseScore)                 VALUES('1539704322946200195','200195','{"type":"bydh","gamebasescore":"1","minhavescore":1,"maxhavescore":100,"creator":96}','127.0.0.1',9999,1539704323,1)
+1539704322946200195
+{ userid: '96',
+  name: '1354',
+  roomid: '200195',
+  sign: '2fc4818f803f79073bda7086956aeadf' }
+2fc4818f803f79073bda7086956aeadf
+{ token: 'a6c93f52b4ba3eded044645f5216cbf3',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "200195" WHERE userid = "96"
+(node:17198) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+login: {"token":"a6c93f52b4ba3eded044645f5216cbf3","roomId":"200195","time":1539704323124,"sign":"2f70f9d3549b18718eef1ad870175b67"}
+ready: {"userId":96}
+game_sync_push[object Object]
+game_ping
+traceKind: 3
+traceKind: 1
+game_ping
+traceKind: 1
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_531537","angle":4.376915926181056,"lockFishId":0,"sign":"1d77049ff27ec05cf5223c6de5407e8c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_532366","angle":-26.59610339272706,"lockFishId":0,"sign":"de7b978e62c62aa0b54257a7b643785f"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_532531","angle":-26.59610339272706,"lockFishId":0,"sign":"6692539ea98c28d09b7db4bbb55d37fc"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_532366","fishId":"10529206","sign":"0840e7cd75d8f5c4a1539d2824ec6656"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_532751","angle":-26.59610339272706,"lockFishId":0,"sign":"d688887be60f24d1c5d53f5b85737978"}
+game_ping
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_532531","fishId":"10527204","sign":"8526ebe375966df7066d94c3d12c8d1a"}
+traceKind: 3
+traceKind: 1
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_533299","angle":-6.826009695378886,"lockFishId":0,"sign":"b0b19b7f7aa37fb8265f5f665ab85dde"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_532751","fishId":"10531206","sign":"75ce0b813de40be7d5df542080e8a47b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_533466","angle":-6.826009695378886,"lockFishId":0,"sign":"999cfcd303ba10a74a48dbe614c9e6a3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_533299","fishId":"10529206","sign":"9723a30950d37f97a4f3eecd84328b29"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_533650","angle":-6.826009695378886,"lockFishId":0,"sign":"cc61385a5ca44be10eeb60ad84638db5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_533466","fishId":"10529206","sign":"41ff696cb969154d8cd7ee44c447bb89"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_534523","angle":34.81577946692392,"lockFishId":0,"sign":"47d51615a52500596cd17c687326201b"}
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_534523","fishId":"11531206","sign":"02ea55588d6795358e450bc8c957ffa5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_533650","fishId":"2533299","sign":"368b9bce320e4ca9a5d0138ae8746ee6"}
+traceKind: 1
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_531537","fishId":"11529206","sign":"7711419199496af0c1c2ef07b789b0d3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_531537","fishId":"11525199","sign":"2de225e2f9de41f7be0b48a70960ea8e"}
+game_ping
+traceKind: 1
+traceKind: 3
+game_ping
+traceKind: 3
+traceKind: 1
+traceKind: 1
+traceKind: 2
+game_ping
+traceKind: 3
+traceKind: 1
+game_ping
+traceKind: 4
+traceKind: 3
+traceKind: 2
+traceKind: 1
+traceKind: 1
+game_ping
+traceKind: 4
+traceKind: 3
+game_ping
+traceKind: 1
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_564774","angle":57.08855521747654,"lockFishId":0,"sign":"31c6945b753e483946ff024fe199c1ca"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_564774","fishId":"10533212","sign":"272655c32cd06c7d4e3a57d2f37089b4"}
+traceKind: 1
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_565464","angle":38.87020154268115,"lockFishId":0,"sign":"c7d46920d408d277af087593d5ee90a4"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_565651","angle":38.87020154268115,"lockFishId":0,"sign":"c5d96385535ff066825b122c226143cc"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_565464","fishId":"10543228","sign":"a062b75082fa13526088480bcd7573a0"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_565947","angle":38.87020154268115,"lockFishId":0,"sign":"32bba13e573696a1167ad1a055624c1a"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_565651","fishId":"10551245","sign":"1cf20d05f207e0f34d543feecaa25ef5"}
+lock_fish: {"userId":96,"chairId":1,"fishId":"2543401"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_565947","fishId":"2543401","sign":"ccb0604942322b961c0baa4d87b6011a"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_566719","angle":52.614702425559614,"lockFishId":"2543401","sign":"b7788d94c410314abc1b98a747409e97"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_566897","angle":52.48976633785287,"lockFishId":"2543401","sign":"5e4732bb0fc54ec118b70473d8cb9a79"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_567090","angle":52.30022892625397,"lockFishId":"2543401","sign":"85158e36c3cfc8edeb05c59fcdd7fd96"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_566719","fishId":"2543401","sign":"88ca9402d4be941c00e3f82de3f71cb4"}
+traceKind: 2
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_567296","angle":52.1081595176109,"lockFishId":"2543401","sign":"f0a1e10b3eb7c691d0c75f32b2cbd384"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_566897","fishId":"2543401","sign":"cda1366ec1e49d68abb2907e1ce0af44"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_567491","angle":51.91359244742316,"lockFishId":"2543401","sign":"5dc9a80eeadcea57f1239c64fcc29226"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_567090","fishId":"2543401","sign":"d9f65e051442fdca343fc19ec8f8a48c"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_567296","fishId":"2543401","sign":"ba7cee692d1cf91da890c6ec157a052e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_567296","fishId":"11547235","sign":"f0e830fbbea23d7500e678670e5f95aa"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_567491","fishId":"2543401","sign":"c9e04d7a7f21e9b95c38a7b4c890f450"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_567491","fishId":"11547235","sign":"28d3eaf49834b3bc1669e927a62b6e1b"}
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_568314","angle":21.244929346353985,"lockFishId":0,"sign":"8f5fd381ab1baa2098ca6e5abfb1775e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_568314","fishId":"11565272","sign":"6c6042274f4e9aae7e7d6ffa09e4f8cc"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_568669","angle":21.244929346353985,"lockFishId":0,"sign":"9c4e122edd1f9f8109c19edafd58035f"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_568669","fishId":"11565272","sign":"55f789c67cfabddbf606a9546b91a71b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_568838","angle":21.244929346353985,"lockFishId":0,"sign":"c4fbadb8e46eb93c736f6b151d1538ea"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_568838","fishId":"11565272","sign":"5cc6a7523b5c7755a86f4a5379cec168"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_569152","angle":21.244929346353985,"lockFishId":0,"sign":"87f723fd5a6811e0bb5e6875a7314cd2"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_569152","fishId":"11565272","sign":"52d477a38df1cf4029216e2662db8a20"}
+traceKind: 2
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_569511","angle":21.244929346353985,"lockFishId":0,"sign":"3371e5dd4874b07534d54638d9d8182d"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_569511","fishId":"11565272","sign":"7705cd9492a1c129ee841cb60f98a6f7"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_569934","angle":21.244929346353985,"lockFishId":0,"sign":"c4989541f21fec744b4009ac1c918591"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_569934","fishId":"3553400","sign":"b44a6622a6ec69850aa41eb94447abe9"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_570217","angle":21.244929346353985,"lockFishId":0,"sign":"fee6d88793f2465b18fc703747249412"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_570217","fishId":"3553400","sign":"176e08e70214d4e23b8b67d572e93151"}
+traceKind: 1
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_571364","angle":66.28379389918464,"lockFishId":0,"sign":"0211bb3dae3831639b341d93de04949d"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_572119","angle":75.41354042245847,"lockFishId":0,"sign":"cbc4aa9e093606035c3d6e1655340308"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_571364","fishId":"11567272","sign":"e620bd5b156042eb5d9450434517272e"}
+lock_fish: {"userId":96,"chairId":1,"fishId":"2543401"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_572119","fishId":"2543401","sign":"1b6c2577a2e4e1de2fb6bcc5c840ab84"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_572949","angle":45.35813057130222,"lockFishId":"2543401","sign":"9d9bc16503629b34f0e5cddddd4c6987"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_573164","angle":45.131943728633544,"lockFishId":"2543401","sign":"f6c6a6285c2d0630980f603edf6e6579"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_572949","fishId":"2543401","sign":"6653f519d4d1acaba55f397b1894f773"}
+traceKind: 2
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_573395","angle":44.907666824196276,"lockFishId":"2543401","sign":"a2f715517e3eaa0828cb6e52890dd9e7"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_573164","fishId":"2543401","sign":"17ed0d8b0d3a4ba306da17d911c692b3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_573558","angle":44.75937173762503,"lockFishId":"2543401","sign":"b508b28fc1b659fe781f253eba4ce421"}
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_573395","fishId":"2543401","sign":"8c66e2f45896950103fa12e3a22d4907"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_573755","angle":44.53901941486992,"lockFishId":"2543401","sign":"bcce6cfd86a0251148e262c130dc9de3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_573558","fishId":"2543401","sign":"ed977423b0840f3a5252ac1aefccd0fe"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_573755","fishId":"11527204","sign":"2ed7d897f525adcf171276e65bbafde2"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_574019","angle":13.256025419223832,"lockFishId":0,"sign":"9ae2d3c197c90b5fa9debaddfb0239ab"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_574019","fishId":"10537222","sign":"50592bfe16ea56ea036b3f0ee9ea98ef"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_574709","angle":23.675978184614237,"lockFishId":0,"sign":"d9cb377e16cecf640e5573e51bfaf960"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_574709","fishId":"10537222","sign":"ca950c15b487db013469442bc4562582"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_575108","angle":23.675978184614237,"lockFishId":0,"sign":"18413f3bb0c9d476ee4887710a7d30ed"}
+traceKind: 1
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_575108","fishId":"3553400","sign":"7134268e411afb1f03bf58224017b64c"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_575108","fishId":"2543401","sign":"6b1d56e79f747460ea88dfaf64db5592"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_575493","angle":34.29901038511283,"lockFishId":0,"sign":"c44a0c96eec2799fed1847ea7afba619"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_575731","angle":34.29901038511283,"lockFishId":0,"sign":"a05bc9ce830f7b0c15bcda472fe6dde8"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_575493","fishId":"2543401","sign":"6111f2d942ef0570497ea09fcef27e61"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_575493","fishId":"3553400","sign":"c95e94e4a1f3e910eaee07c1fe2bcbda"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_575731","fishId":"2543401","sign":"e5b69405d9889c1c2127751d82a47579"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_575731","fishId":"3553400","sign":"a7d945d7cdd891437df8bdddc5eedea7"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_576245","angle":42.884231812438195,"lockFishId":0,"sign":"a32e6a066abb3799b790917156812f90"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_576512","angle":42.884231812438195,"lockFishId":0,"sign":"41cef071a6333b2bded287515123c152"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_576245","fishId":"2543401","sign":"33aea854b2eaad0b83ffaee6f1f17eb2"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_576512","fishId":"2543401","sign":"14e61cd1c348367c4bd9f39ed0ea99e2"}
+traceKind: 1
+game_ping
+traceKind: 2
+traceKind: 3
+game_ping
+traceKind: 2
+traceKind: 4
+traceKind: 3
+traceKind: 2
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_586723","angle":71.28111482155008,"lockFishId":0,"sign":"ddd8017e449ec6dc215afc6ae507d2d7"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_586723","fishId":"2543401","sign":"5c4a30a1cd2007bf93254b28c086dde1"}
+traceKind: 1
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_587457","angle":69.92278974840583,"lockFishId":0,"sign":"e0d464efe9cf88192ef4c8e9dfa0bbe4"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_587457","fishId":"2543401","sign":"6ec09ce8f1971c835638153906623685"}
+lock_fish: {"userId":96,"chairId":1,"fishId":"2543401"}
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_588328","angle":79.77755889135638,"lockFishId":"2543401","sign":"6df74390a978141d1c45e461be092dab"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_588328","fishId":"2543401","sign":"ec28ce8c3c7882140f7f845ef9a52f53"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_588559","angle":80.64128979600987,"lockFishId":"2543401","sign":"4b1436bb8b0246584348d4abb4a37e18"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_588559","fishId":"2543401","sign":"990669b14736533ac170e8d8add2255d"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_588780","angle":81.49544888307891,"lockFishId":"2543401","sign":"0aa0559f72f308ebb93d685bd7af73dd"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_588960","angle":29.330560324504724,"lockFishId":0,"sign":"cf2444c6cf3cc2646d7af72d843438b3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_588780","fishId":"3583601","sign":"63183a35fbc113a09e6bdea82ff7cce2"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_588960","fishId":"11555250","sign":"22a8183d3840d4c26db5f8d7c5f2be55"}
+traceKind: 2
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_589530","angle":11.567403171283999,"lockFishId":0,"sign":"222c9d954e1b550c52630d1457ebfa32"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_589974","angle":-19.090810506521677,"lockFishId":0,"sign":"f57d4acd4a762c2be549199717ff6b7e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_589530","fishId":"10569276","sign":"4622cc2dc5701f191817c4805c337592"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_589530","fishId":"10563266","sign":"7399341e56ee23133d5eaba6a29c88b7"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_590281","angle":-19.090810506521677,"lockFishId":0,"sign":"72d353ed390106f1c38079fd3ae1ecd4"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_590432","angle":-19.090810506521677,"lockFishId":0,"sign":"b5e0eca959ba3b18a3f1f3769d0be1f6"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_589974","fishId":"10581295","sign":"2b7ae820c3618367bb08b337bd23977e"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_590760","angle":42.16846977224856,"lockFishId":0,"sign":"dd6abc94b1bb35c20917738288a78204"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_590924","angle":42.16846977224856,"lockFishId":0,"sign":"0a4576eaa37d138b63092d4ae0fe82d3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_590281","fishId":"10577288","sign":"3133ba42dfcf0db643c81954f388130c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_591082","angle":42.16846977224856,"lockFishId":0,"sign":"92d9ffd7130f54682d696b1c8f873564"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_590432","fishId":"10577288","sign":"5aefbd4ce17a5dd594070afbd6b7d09b"}
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_590760","fishId":"10561264","sign":"5959680f4e12710dbfaf513a7ca769b0"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_590924","fishId":"10561264","sign":"3940b8a2669847de72369f6588aee8bb"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_591577","angle":57.345172638889764,"lockFishId":0,"sign":"83fc2c41a94cb359a183a1199e98ef12"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_591082","fishId":"11535217","sign":"4c15e7e6a23753e2f9b698bf530e6ada"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_591577","fishId":"11585302","sign":"d289979a685dd3e6cca7cb74ff94e8a2"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_591732","angle":57.345172638889764,"lockFishId":0,"sign":"946f43feb1f5f684f1c8c5d69847cf9e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_591732","fishId":"11585302","sign":"6783597dd9e4ed75c2a2399dd4ca00ca"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_592043","angle":57.345172638889764,"lockFishId":0,"sign":"b95af2818ee1f57ea5bb824c24bb7203"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_592043","fishId":"11585302","sign":"88629e1508437e57c94c81b65f0206a3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_592399","angle":57.345172638889764,"lockFishId":0,"sign":"83d1bd04f57386a9b7d0e196997b3466"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_592399","fishId":"11585302","sign":"cc428769ba7e05c2b7012c7324d3811c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_592635","angle":57.345172638889764,"lockFishId":0,"sign":"8a0951983e6d353bfe62623d3af30286"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_592635","fishId":"11585302","sign":"c9eaef81b60075eee9fce25172c5ce58"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_592399","fishId":"3583601","sign":"580e47a2724a36037f8c0e0c955b66af"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_592919","angle":57.345172638889764,"lockFishId":0,"sign":"f68006979672a84100bbac96fb9cc3a2"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_592919","fishId":"3583601","sign":"29968add396858582ec7593906d2f514"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_593251","angle":57.345172638889764,"lockFishId":0,"sign":"241f69a2cd951ad48402a9ff95f803fe"}
+traceKind: 4
+game_ping
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_593251","fishId":"11591312","sign":"fa1fd8a0aa996a6576eca5876df914b5"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_593750","angle":63.74366193991567,"lockFishId":0,"sign":"361ae61927c8ed779d1289f886864846"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_593750","fishId":"11591312","sign":"d8b2b5effcf9846fea62c8a5bfceecfd"}
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_594257","angle":67.77405037955715,"lockFishId":0,"sign":"c8e6522ff9ddd179ff8d8f7a99f5b526"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_594257","fishId":"3583601","sign":"02e024aff925eea487e7edaf3a58f98f"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_595001","angle":83.08801553680175,"lockFishId":0,"sign":"e1163adb4d965a20d579815fb9eee6fd"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_595001","fishId":"3583601","sign":"34b84e70f975dd49279ee7bdfdf593a0"}
+traceKind: 1
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_595329","angle":83.08801553680175,"lockFishId":0,"sign":"e4ea45339d3a5471f8a5d60a7ddbe3de"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_595473","angle":83.08801553680175,"lockFishId":0,"sign":"01be272ccaf82c31973afba625a473b4"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_595329","fishId":"3583601","sign":"b35b961ac78968168b1aaae9cd6796c2"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_595473","fishId":"3583601","sign":"f68b2902e83792328c341c7ec7fd975f"}
+lock_fish: {"userId":96,"chairId":1,"fishId":"3583601"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_596495","angle":59.61309958330861,"lockFishId":"3583601","sign":"395b5a79bd0735ab4e5a1c12efa9a11e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_596495","fishId":"3583601","sign":"6ccaf48ad8778f60d83ed0231c20d6bc"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_596656","angle":58.959696218525565,"lockFishId":"3583601","sign":"d6368d5a356c89603209987acb8d5b28"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_596656","fishId":"3583601","sign":"bceec81ee482c116ecd35b6de69fbceb"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_596865","angle":58.31763942913683,"lockFishId":"3583601","sign":"dfbd439fdf3390f03762a0a9f4d3c592"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_596865","fishId":"3583601","sign":"18928d3ad121a7df855687f47dd72e4f"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_597085","angle":57.3767741285558,"lockFishId":"3583601","sign":"8baf465c511ba2cf0b84ae165d3688cd"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_597085","fishId":"3583601","sign":"cbbda0f9f1298ae67a9f38451e3b9ca3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_597311","angle":56.46373823226025,"lockFishId":"3583601","sign":"ab433924d2af04066c2a3e3eae28bb57"}
+traceKind: 3
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_597311","fishId":"3583601","sign":"4005a2c3da95a20aaaa8eead2c672e44"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_597544","angle":55.57968075443383,"lockFishId":"3583601","sign":"7365afd4919c10c889f4dae0e8203b54"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_597544","fishId":"3583601","sign":"dce7e617a974deac73f96024bb795a19"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_597758","angle":54.72557499208011,"lockFishId":"3583601","sign":"bb9adce7a2c560f00026392b8ab1d941"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_597758","fishId":"3583601","sign":"4621c044f63613389d47ee5943cbe624"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_597979","angle":53.902221983399926,"lockFishId":"3583601","sign":"4d037086905ecf7a3b7d4dd7e08e2117"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_597979","fishId":"3583601","sign":"00e288bf0015b85f5781c6fa9f928d1c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_598191","angle":53.110255918033175,"lockFishId":"3583601","sign":"c07d0693f25d4e528b183a1d10c761fe"}
+game_ping
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_598191","fishId":"3583601","sign":"cac871f738df56a7f513c6cecb733f34"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_598408","angle":52.35015118155407,"lockFishId":"3583601","sign":"ef1493772cd01f0185ebedc1d675b337"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_598408","fishId":"3583601","sign":"6d87c2c9874434ebadf1bca4903c1c54"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_598631","angle":51.62223071404386,"lockFishId":"3583601","sign":"11d60f016497b38ff46ae72a02fbebc6"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_598631","fishId":"3583601","sign":"c813f73ad1f43bb302facee63db8ebdb"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_598848","angle":50.92667537157135,"lockFishId":"3583601","sign":"7038b5d0eb129dab13c5d1e94cf6f6ab"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_598848","fishId":"3583601","sign":"15095d7c5f8c720b1c80bdcca8e19e4b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_599071","angle":50.26353399763337,"lockFishId":"3583601","sign":"8a0f308e10d6ab2b230969a9ab7b7cd5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_599071","fishId":"3583601","sign":"d6003bd94bc04dec913e2fa6f6ee1ebb"}
+traceKind: 1
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_599279","angle":49.63273393663878,"lockFishId":"3583601","sign":"a65e67ee1fc7d4790d6fdeeedc2323bd"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_599279","fishId":"3583601","sign":"49dace61baebb16f1752874a7565b8da"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_599485","angle":49.03409175107472,"lockFishId":"3583601","sign":"d14e31fde22d923369cb0228cd7f6ee4"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_599485","fishId":"3583601","sign":"c173897d3a3928d2eee6d2a54501a9da"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_599696","angle":48.46732393601787,"lockFishId":"3583601","sign":"2e0c177e7f25089e10cade12e37f7334"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_599696","fishId":"3583601","sign":"03a1f77930968ca93de28e14dc9cb00a"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_599911","angle":47.932057457402536,"lockFishId":"3583601","sign":"205dc36d5d9d8207c6c03a61fa7c990f"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_599911","fishId":"3583601","sign":"462b0cdb769d735efba7b9f0ec991863"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_134","angle":47.4278399725166,"lockFishId":"3583601","sign":"323cfcbc8cf956d3a83948b37f60b55c"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_134","fishId":"3583601","sign":"239ad85c5a6179ea29b6c122b1fa99ac"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_364","angle":46.95414962150556,"lockFishId":"3583601","sign":"45423051fb60ddbdaa543e251aa0b761"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_364","fishId":"3583601","sign":"c7a52e91e0ef803a07566becbc1fd4c1"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_588","angle":46.51040430646632,"lockFishId":"3583601","sign":"43250459305642f541c12c18e6b553a8"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_588","fishId":"3583601","sign":"1fbe9428099afe8105410e3b578779a0"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_798","angle":46.095970399543326,"lockFishId":"3583601","sign":"f9b63b15eebc2f526c97703165da11d7"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_798","fishId":"3583601","sign":"9cbd1029676bdb6995c0268a86ebf216"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_1009","angle":45.71017084306451,"lockFishId":"3583601","sign":"f80dda365858c09b247ce0251fdf9dcb"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_1009","fishId":"3583601","sign":"903756c33a5a449ad1b9aa8078793315"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_1222","angle":45.35229262313297,"lockFishId":"3583601","sign":"46752734b14d1c03bd9f598fb6a91d38"}
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_1222","fishId":"3583601","sign":"fa311d7b584f189c488cb0c6764698c3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_1463","angle":45.02159361332123,"lockFishId":"3583601","sign":"5999fd9501364a50a4e975604bf12067"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_1463","fishId":"3583601","sign":"03a0f9d66ee77237b8f9717490b4d9e9"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_1694","angle":44.717308797399696,"lockFishId":"3583601","sign":"a8e38161e4534fff829ffa14f51791bb"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_1694","fishId":"3583601","sign":"9536add0c6be04386d0d3b21c893cf99"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_1921","angle":44.43865588963786,"lockFishId":"3583601","sign":"ac5b9d73bd0c202acded1da131044a65"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_1921","fishId":"3583601","sign":"13520cfabb2181f33a176db20ba37e84"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_2147","angle":44.18484037845054,"lockFishId":"3583601","sign":"e877468343e66f995dd0a8922ac4cf43"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_2147","fishId":"3583601","sign":"0db79178279b2a164c14456d2ff6f2c5"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_2305","angle":44.02903261809956,"lockFishId":"3583601","sign":"4e3b70cba32f02ae0a4725e3ae2be6fe"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_2305","fishId":"3583601","sign":"b4da83bab0251d2414065721e6e64330"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_2573","angle":44.02903261809956,"lockFishId":0,"sign":"6e50c1522bd51afa3993148df252d603"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_2573","fishId":"3583601","sign":"c9fc9fe71fb8b4c71f9e03e440d048c2"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_2785","angle":44.02903261809956,"lockFishId":0,"sign":"1b103af9f83e51d57902f73feca9a8e5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_2785","fishId":"3583601","sign":"bf836187c94129672b98610f6637362a"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_3012","angle":44.02903261809956,"lockFishId":0,"sign":"74ab1dab49d9c719fa218617d389d3d0"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_3214","angle":44.02903261809956,"lockFishId":0,"sign":"f5b6ffb31785f2a454df0fb34358628b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_3012","fishId":"3583601","sign":"a3aa34019eb262e557b2fced0f287d9a"}
+traceKind: 3
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_3400","angle":44.02903261809956,"lockFishId":0,"sign":"baea10b4959f9cf8a69134fc0b5ac514"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_3214","fishId":"3583601","sign":"f3c6cf1dd776e1c4607513053edb4477"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_3598","angle":44.02903261809956,"lockFishId":0,"sign":"54f695df6857c81febb7ebe47fc3cefc"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_3400","fishId":"3583601","sign":"a25018dd928974a9cfc3deb7a46d449d"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_3770","angle":44.02903261809956,"lockFishId":0,"sign":"5705a8a0e404aba6e5b5d68d8c014473"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_3598","fishId":"3583601","sign":"d2be77fefd66be64d21d7e71b77c1ef8"}
+traceKind: 1
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_3770","fishId":"3583601","sign":"271e37679d5b9c60a0e7edc6671d4479"}
+traceKind: 2
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_5411","angle":44.02903261809956,"lockFishId":0,"sign":"5dae9340d96132089b9e03fb5a1d4ee6"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_5649","angle":44.02903261809956,"lockFishId":0,"sign":"6fef58f1c6d8c754f7ec1261008c93f0"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_5411","fishId":"3583601","sign":"4d99c754d15cb76e0ce66038c0d8f789"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_5880","angle":44.02903261809956,"lockFishId":0,"sign":"b42638e7594bc8950b6462bfb8878fc5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_5649","fishId":"3583601","sign":"f9f15cd1b2ac39135833a7c3beadfddf"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_6123","angle":44.02903261809956,"lockFishId":0,"sign":"413433df0c27cddeed28f7631e8d0e68"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_5880","fishId":"3583601","sign":"f76c231c64ce9515eb49c9d33a372e72"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_6283","angle":44.02903261809956,"lockFishId":0,"sign":"e5d06035be806b30ac197ff908a4e7da"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_6123","fishId":"3583601","sign":"3fde768f992a57f8c6f9e7075496d4b5"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_6442","angle":44.02903261809956,"lockFishId":0,"sign":"5e57d9a5f5e8f02b598505b5350534e6"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_6283","fishId":"3583601","sign":"1853e81b4e9c29d49f55005bd463174f"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_6657","angle":44.02903261809956,"lockFishId":0,"sign":"7b39c20c307072c5ff8f5f71ebb3b045"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_6442","fishId":"3583601","sign":"8f116860faa5124385a1eb1ffafa6e49"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_6884","angle":44.02903261809956,"lockFishId":0,"sign":"7669417051ad235e9deaafc17f2c6408"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_6657","fishId":"3583601","sign":"9e2a49bfbd4d64740a56fc3679dac10b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_7081","angle":44.02903261809956,"lockFishId":0,"sign":"bf7cd035831855bb8c2c7f006a64ae05"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_6884","fishId":"3583601","sign":"adff41acd539bf28cca56b2ec3e37c77"}
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_7294","angle":44.02903261809956,"lockFishId":0,"sign":"91f1d2e9ad928080a58a447046531b25"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_7081","fishId":"3583601","sign":"329b77e91c52a62f8dfac5414f76ad9d"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_7513","angle":44.02903261809956,"lockFishId":0,"sign":"818dfdcfd03be27a5d3d9449256bc1ba"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_7294","fishId":"3583601","sign":"cb9b173c9557a0bdbc745fe47fa3b085"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_7721","angle":44.02903261809956,"lockFishId":0,"sign":"279bb4c1065886ff1e3e370cd3f2393e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_7513","fishId":"3583601","sign":"a023bfbef07a2edf554a3e1e7a6ed486"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_7925","angle":44.02903261809956,"lockFishId":0,"sign":"28b8fdf5ca23640dbb8b5d898a2416ac"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_7721","fishId":"3583601","sign":"c6bb4a7dad3b360a249b2e4382cd7bda"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_8140","angle":44.02903261809956,"lockFishId":0,"sign":"e27966a7337bf4275722b2a343de7086"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_7925","fishId":"3583601","sign":"74b7f95a87d803067c4c57d347fe9b6d"}
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_8384","angle":44.02903261809956,"lockFishId":0,"sign":"fd7a72646c2a2f395b4cc7477b63c391"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_8140","fishId":"3583601","sign":"66ece6f1d41a3b499e53b68704eb4b69"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_8541","angle":44.02903261809956,"lockFishId":0,"sign":"338072d5f3a81befda30816cf647f542"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_8384","fishId":"3583601","sign":"dc9be95692532f4d49ec0a5bd478451e"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_8700","angle":44.02903261809956,"lockFishId":0,"sign":"1efe0e7eca07e84bab402c8228412760"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_8541","fishId":"3583601","sign":"515a125f7b1c913eeb98d12742a4f1f3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_8907","angle":44.02903261809956,"lockFishId":0,"sign":"3dc1a27a19319f2aea1cccdf486d8b98"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_8700","fishId":"3583601","sign":"998693ad3fe5cb5e3534aaed483fdb3e"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_9118","angle":44.02903261809956,"lockFishId":0,"sign":"67fdf1a263af922a58a45f224f1f317b"}
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_8907","fishId":"3583601","sign":"14074e9ee03d1ad67983013a7ce7fed9"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_9345","angle":44.02903261809956,"lockFishId":0,"sign":"cd1ab46ba861bf95199c4fa6f0c69c58"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_9118","fishId":"3583601","sign":"ab28f3389f30bc6b513023861e6e446c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_9572","angle":44.02903261809956,"lockFishId":0,"sign":"4da9476afd9c8373314b42cabf91dde7"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_9345","fishId":"3583601","sign":"5f220675a0d117e28ab536e4a4eb31da"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_9734","angle":44.02903261809956,"lockFishId":0,"sign":"fdc818dc7b22dc96812d79c6cbf25465"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_9572","fishId":"3583601","sign":"8ecea0b1ab3d8c8d68c3379ae1430163"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_9965","angle":44.02903261809956,"lockFishId":0,"sign":"0c664f5520c7040f419b350ba19dcd9d"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_9734","fishId":"3583601","sign":"73a028c810c4f01637ba099213605b75"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_10145","angle":44.02903261809956,"lockFishId":0,"sign":"c9bafa9f9c0d8552ceebf1c1cff18e7b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_9965","fishId":"3583601","sign":"c7c1fbd841af6b40189ce6b252f11730"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_10327","angle":44.02903261809956,"lockFishId":0,"sign":"2ae81e9880f2e23b910ffdd696ee385b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_10145","fishId":"3583601","sign":"cf8b50ae1658067fab3871aef383816e"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_10501","angle":44.02903261809956,"lockFishId":0,"sign":"8902e505a471fec75e9e9c35356622fa"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_10327","fishId":"3583601","sign":"764e64e60a740b19db5a22126220e365"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_10677","angle":44.02903261809956,"lockFishId":0,"sign":"1a0e3b420f6d477fb0c9728130abaebd"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_10501","fishId":"3583601","sign":"34edb8bf501fa08a848828966861b3f3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_11131","angle":44.02903261809956,"lockFishId":0,"sign":"0e25f1967b8008f33b13ed70b43c8cc7"}
+traceKind: 1
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_10677","fishId":"10575288","sign":"155f31c280c4b4f1f0fb24a7fc75e13a"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_10677","fishId":"3583601","sign":"f6d546114dd4a5fa0156b818d08911f7"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_11306","angle":44.02903261809956,"lockFishId":0,"sign":"4a4dbbed874306f936fc01690f719151"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_11443","angle":44.02903261809956,"lockFishId":0,"sign":"f9a59c3ef1cb7a3bec2f95a3e72bf4c5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_11131","fishId":"3583601","sign":"cb560c4ea4af1a9b965073c3a1d317fe"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_11622","angle":44.02903261809956,"lockFishId":0,"sign":"a383e22c24a071d404267bd2d81baded"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_11306","fishId":"3583601","sign":"314e1873c9e14e380046d0d98d353c00"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_11443","fishId":"3583601","sign":"3b8a5d17960da7e8dc44d448d9914d22"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_11898","angle":44.02903261809956,"lockFishId":0,"sign":"c7cd3f40ca705b14f260b63270999349"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_11622","fishId":"3583601","sign":"c8b781e50f5d75f7f07ce8f8618e0488"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_12063","angle":44.02903261809956,"lockFishId":0,"sign":"5c5490baf338892f6c7e0d4a263fd850"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_12246","angle":44.02903261809956,"lockFishId":0,"sign":"0ea9af27b3ce4b01cedb8de97476305b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_11898","fishId":"10575288","sign":"b82db460de62b22d637509cf38bf8f6d"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_12421","angle":44.02903261809956,"lockFishId":0,"sign":"1e3bc959897740927c09b49ebe870a54"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12063","fishId":"10575288","sign":"f78b3dd37ac0dae5a6145db27823a16c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_12580","angle":44.02903261809956,"lockFishId":0,"sign":"60451aeefb5485261daae8ae911fee5c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_12793","angle":44.02903261809956,"lockFishId":0,"sign":"788e2de64189975e3c89d4bd9939c24c"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12246","fishId":"11573284","sign":"2f1f0cb231f48a111a2fd41318e5d8a4"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12246","fishId":"2583810","sign":"fdaec346b4a1565f9b1eddd9fb043526"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12421","fishId":"10575288","sign":"0a99da00908d49a86854cf0e0d0cd66b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_13052","angle":44.02903261809956,"lockFishId":0,"sign":"44393d4aa431af61609bbaf755103e19"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12580","fishId":"2583810","sign":"0dcda20d3773f445a2be1c37e7f280ef"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12580","fishId":"11573284","sign":"8e72938c0c516ba5906dac322723491e"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_13290","angle":44.02903261809956,"lockFishId":0,"sign":"9364afe1faddc38f145079efc6fc2f75"}
+game_ping
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12793","fishId":"11573284","sign":"7b3bb6d89a189a5c15e9ce52074c48af"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_12793","fishId":"2583810","sign":"3872556d6bbb9118be7a9e81faa9d872"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_13452","angle":44.02903261809956,"lockFishId":0,"sign":"41e4a4d84c84e8e883a90c29234b964f"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_13052","fishId":"10575288","sign":"d59b99077bae7ad5f91632dcc080cbae"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_13625","angle":44.02903261809956,"lockFishId":0,"sign":"e5bb1e6c28dfb098f1d328e224979e6b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_13786","angle":44.02903261809956,"lockFishId":0,"sign":"9bf18a47b767c20c5b27ca7449b60bd1"}
+traceKind: 1
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_14008","angle":44.02903261809956,"lockFishId":0,"sign":"3b793de392c2548237aa5e3ef32a81c3"}
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_13452","fishId":"2583810","sign":"133f981fdc4d0f3144e2e754d238af65"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_14173","angle":44.02903261809956,"lockFishId":0,"sign":"a2e0e5a00e918b6b5ed503a53a769df6"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_13625","fishId":"2583810","sign":"9dabbb3cf50dc5538006c0b7455d2487"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_14349","angle":44.02903261809956,"lockFishId":0,"sign":"fec6a36d070245bb7a4e15fb602d5de7"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_13786","fishId":"2583810","sign":"63b991dd0bda12962d5e234286a4324c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_14493","angle":44.02903261809956,"lockFishId":0,"sign":"02dc85b27a1f930e9711a27573e3771d"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_14008","fishId":"2583810","sign":"8b3e08c2abf53be13985cfcd62947a15"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_13290","fishId":"2553502","sign":"48d5cbedf98cc723b1bd9f192c018e3b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_14173","fishId":"2583810","sign":"0fe12dfcf61b3a7e2a69fea1c08aad4b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_14734","angle":44.02903261809956,"lockFishId":0,"sign":"13d8ba39d10e7da2748ca247ca2d6a50"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_14349","fishId":"2583810","sign":"9e8b480f9f05f31bc1940b34a24e412c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_14977","angle":44.02903261809956,"lockFishId":0,"sign":"78e82dc80855fcbb88b29a5399c83860"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_14493","fishId":"2583810","sign":"fdf5d2b9d4e919f7c324f603cdded3cc"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_15139","angle":44.02903261809956,"lockFishId":0,"sign":"b63d1cdb547dfdaed1112941ca6ce650"}
+traceKind: 3
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_14734","fishId":"2583810","sign":"f5c5615d3186872f709f343b059439b3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_15385","angle":44.02903261809956,"lockFishId":0,"sign":"c0cdb2dadc1dbd94136bf6a46dfff054"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_14977","fishId":"2583810","sign":"ad3805b479a55708395539dc33dff3ec"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_15548","angle":44.02903261809956,"lockFishId":0,"sign":"6395cf32babbb526305d4429d0a1191b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_15139","fishId":"2583810","sign":"a255cf35b09696f459fbda2465814792"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_15719","angle":44.02903261809956,"lockFishId":0,"sign":"48173908a8a991d3c8c072202db925de"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_15895","angle":44.02903261809956,"lockFishId":0,"sign":"21f3aa9037e8e49ff82b94c88c1d5fb1"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_15385","fishId":"2583810","sign":"005983d1b914d4fc91bf3438a48d2d4b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_16067","angle":44.02903261809956,"lockFishId":0,"sign":"fab303527f6445af45ad9262c1c24134"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_15548","fishId":"2583810","sign":"b23ff1f56ae7d41309fad70a747e138f"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_16230","angle":44.02903261809956,"lockFishId":0,"sign":"8c2f33f83e90b3dd06bba45b095e26a2"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_15719","fishId":"2583810","sign":"8fddcdd585142e025ff7fa0e0bdeec7b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_15895","fishId":"10581295","sign":"6a35539a7b6b74602832d16e64799220"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_16472","angle":44.02903261809956,"lockFishId":0,"sign":"f16391ce0dfb669133b031cc4b6aedfc"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16067","fishId":"10581295","sign":"f7bda0c10048bbec51f9f5482006b99c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_16688","angle":44.02903261809956,"lockFishId":0,"sign":"4ea10b66bc64ff34af2e244c2242a094"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16230","fishId":"2583810","sign":"62ecac4bc878fecef040949fee0602d4"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_16926","angle":44.02903261809956,"lockFishId":0,"sign":"ee0d2b94538f2f9ffe91f0773ee53701"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16230","fishId":"11583300","sign":"de69292f3c26e751d1e3198876bf0d52"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16472","fishId":"2583810","sign":"9b68e6fc5e7c8c5f6c37805e6ec3ac1b"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16472","fishId":"11583300","sign":"a4ce3cfbd287169041099e6d58603679"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_17163","angle":44.02903261809956,"lockFishId":0,"sign":"7c344169d7ea2f739baae2d8b755dce7"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16688","fishId":"2583810","sign":"3896312a8b8f5f714da33cf1eba55977"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16688","fishId":"11583300","sign":"8f52b4ca9b5c03cea056b0c86b195263"}
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_17404","angle":44.02903261809956,"lockFishId":0,"sign":"35b0d100b8ba2b772574463c93ec7088"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16926","fishId":"2583810","sign":"dadecf55d0f24f52afd64b17ad6b1dbf"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_16926","fishId":"11583300","sign":"5df2bb724848529ee77bb983ed2db3fc"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_17566","angle":44.02903261809956,"lockFishId":0,"sign":"5682d1f57acdcbca1b9349250b3d7b1a"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_17163","fishId":"2583810","sign":"f1b83f6741f4c9c1803932f916ff44c3"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_17735","angle":44.02903261809956,"lockFishId":0,"sign":"a99d3a4aceaee4b90d50a9809dee57cf"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_17898","angle":44.02903261809956,"lockFishId":0,"sign":"03e045e4098fc956427fd277282fbdd9"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_17404","fishId":"2583810","sign":"e931f4fae8e70b6dce512213e25412aa"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_18076","angle":44.02903261809956,"lockFishId":0,"sign":"30a60aad1d4c40000898b00252a1e04e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_17566","fishId":"2583810","sign":"8174e1a65b6d4ad3784d2398efdac827"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_17735","fishId":"11583300","sign":"191880cba9bfb0ca472a5c43e4b6abea"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_17735","fishId":"2583810","sign":"f760a5fefb2e55372a2e061f69e7a803"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_18272","angle":44.02903261809956,"lockFishId":0,"sign":"e55aa7694a684f2afc9493f6d440035c"}
+game_ping
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_17898","fishId":"2583810","sign":"cad1bdcc845608e3a72c8cfd729a7fed"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_18460","angle":44.02903261809956,"lockFishId":0,"sign":"b889d82dcdf9c9f0466edb377d398d42"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_17898","fishId":"11583300","sign":"e588724f7710958dca464060c4bc2e0e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_18076","fishId":"11581295","sign":"c6b70a932fdd19aead63000093011ec3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_18272","fishId":"11583300","sign":"a2ad9dd7fdf415b8e475de71b8407cfb"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_18272","fishId":"2583810","sign":"1984d921505ed60e87f9e5c73f560e68"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_18460","fishId":"2583810","sign":"d16e0971a5e3e0ccba323557ca1c14b0"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_18460","fishId":"10585302","sign":"71a438d375180bbb4f118d0932d519f7"}
+traceKind: 1
+traceKind: 3
+game_ping
+traceKind: 2
+traceKind: 3
+traceKind: 2
+traceKind: 2
+game_ping
+traceKind: 2
+traceKind: 2
+game_ping
+traceKind: 3
+traceKind: 2
+lock_fish: {"userId":96,"chairId":1,"fishId":"313804"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_34996","angle":70.41882544354003,"lockFishId":"313804","sign":"1a8a0ba34018324c09bcd024c56c522b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_35160","angle":70.28069314204528,"lockFishId":"313804","sign":"a4355fda860bb9c9cacd233b87f4d0bf"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_35328","angle":70.13915495777299,"lockFishId":"313804","sign":"64c0584c2f40457f8d8057a87bbcf2c2"}
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_35494","angle":69.99419212081781,"lockFishId":"313804","sign":"ea2fd6fc8ae31bbedc343a08c3c3607c"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_34996","fishId":"313804","sign":"4e70d7a73aed70fd691295ee2e2d399b"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_35668","angle":69.84578689306704,"lockFishId":"313804","sign":"eab700b4a5df335dbe5c9eb2f19909dd"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_35160","fishId":"313804","sign":"86baf0927d1fcae56e35d2d407e0a03c"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_35849","angle":69.6939226396347,"lockFishId":"313804","sign":"b4e3561bf212693c62cf4f9006b4c520"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_35328","fishId":"313804","sign":"fe6ac7f195fc08693776bcc7d6e99ac5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_35494","fishId":"313804","sign":"e05e1fdce564bd5e8ebb6f3c1850e306"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_36027","angle":69.53858389696515,"lockFishId":"313804","sign":"49d1eb2bfc90a0f29aebde98d26ad91e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_35668","fishId":"313804","sign":"7216cc2c503347d79ff307375459e41a"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_36184","angle":69.37975643743405,"lockFishId":"313804","sign":"17dd9b14279f9836b2f5368ae1c7f846"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_35849","fishId":"313804","sign":"5f0bd20009f6fd2c7869fb39762dbdc5"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_36355","angle":69.21742733031375,"lockFishId":"313804","sign":"2327a6ce5bb92d4f75741d875ee699ed"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_36027","fishId":"313804","sign":"c3b701b6e38dc4aa8e4a761d2ad787bd"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_36532","angle":69.05158499900001,"lockFishId":"313804","sign":"7c628045e2324b3d114401f274f12b36"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_36184","fishId":"10589307","sign":"8625e7f37480c4d8eb2bc4906c3d3502"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_36184","fishId":"1111350","sign":"e399e3a612658754e5169380006a22e0"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_36355","fishId":"10589307","sign":"623794ea0af0e81439a740642d23b747"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_36532","fishId":"10589307","sign":"9a27f46ba8c2655a2a46e716c7423472"}
+traceKind: 1
+game_ping
+traceKind: 2
+traceKind: 3
+game_ping
+traceKind: 1
+traceKind: 1
+traceKind: 1
+traceKind: 3
+traceKind: 1
+game_ping
+traceKind: 3
+traceKind: 3
+game_ping
+traceKind: 3
+traceKind: 3
+traceKind: 3
+account===========================guest_1539704291669
+SELECT U.userid,U.account,U.name,U.headimg,U.lv,U.exp,U.coins,U.vip,U.money,U.gems,U.roomid,U.RenameCount,U.ReHeadCount,P.propId,P.ice FROM t_users U LEFT JOIN t_property P ON U.userid = P.userid WHERE U.account = "guest_1539704291669"
+RowDataPacket {
+  userid: 96,
+  account: 'guest_1539704291669',
+  name: '1354',
+  headimg: '1',
+  lv: 1,
+  exp: 0,
+  coins: 10000,
+  vip: 0,
+  money: null,
+  gems: 10000,
+  roomid: '200195',
+  RenameCount: 0,
+  ReHeadCount: 0,
+  propId: 37,
+  ice: 5 }
+{ account: 'guest_1539704291669',
+  userid: 96,
+  name: '1354',
+  headimg: '1',
+  lv: 1,
+  exp: 0,
+  coins: 10000,
+  vip: 0,
+  money: null,
+  gems: 10000,
+  ip: '127.0.0.1',
+  sex: undefined,
+  RenameCount: 0,
+  ReHeadCount: 0,
+  item: { ice: 5 } }
+SELECT userid,account,name,headimg,lv,exp,coins,vip,gems,roomid,RenameCount,ReHeadCount FROM                t_users WHERE account = "guest_1539704291669"
+dbname=========================MTM1NA==
+{ userid: '96',
+  name: '1354',
+  roomid: '200195',
+  sign: '2fc4818f803f79073bda7086956aeadf' }
+2fc4818f803f79073bda7086956aeadf
+{ token: 'd4b3a3ea41871aa7f6598efeb2137dd1',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "200195" WHERE userid = "96"
+traceKind: 4
+game_ping
+traceKind: 3
+traceKind: 4
+game_ping
+traceKind: 3
+traceKind: 4
+SELECT userid,account,name,headimg,lv,exp,coins,vip,gems,roomid,RenameCount,ReHeadCount FROM                t_users WHERE account = "guest_1539704291669"
+dbname=========================MTM1NA==
+{ userid: '96',
+  name: '1354',
+  roomid: '200195',
+  sign: '2fc4818f803f79073bda7086956aeadf' }
+2fc4818f803f79073bda7086956aeadf
+{ token: 'fff7479d216b5c4dadf8032cde93ecfb',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "200195" WHERE userid = "96"
+login: {"token":"fff7479d216b5c4dadf8032cde93ecfb","roomId":"200195","time":1539704464798,"sign":"4ae6031f3e1fe78e20c5f51765a62c03"}
+ready: {"userId":96}
+game_sync_push[object Object]
+game_ping
+traceKind: 4
+traceKind: 1
+game_ping
+traceKind: 3
+game_ping
+traceKind: 2
+game_ping
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_73840","angle":21.204183864870302,"lockFishId":0,"sign":"da2eb61b767c1ba318e6eccce915ff87"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_74016","angle":21.204183864870302,"lockFishId":0,"sign":"4bb4c1879814c13b20cd63b0723ef99e"}
+traceKind: 2
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_74544","angle":-20.983270435614912,"lockFishId":0,"sign":"09194f3965ec05ee8cdce590575e3f21"}
+traceKind: 2
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_74861","angle":-20.983270435614912,"lockFishId":0,"sign":"15547d80ce8ec7c6e661d8088a4cbe9e"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_75027","angle":-20.983270435614912,"lockFishId":0,"sign":"b2c357d9e7d703b1a13edf911d93dec2"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_74544","fishId":"1069466","sign":"ff22c9bec21ad9e40d6367f87b3f2bcc"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_74861","fishId":"1071471","sign":"11db41bb59f227e8c69f12fecf38c5d9"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_75027","fishId":"1071471","sign":"83f224d61e6c4c820b21e0770a8d0057"}
+traceKind: 2
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_75852","angle":21.788611067527043,"lockFishId":0,"sign":"d0d0570640d3cdbe1744bd368704f9bf"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_76027","angle":21.788611067527043,"lockFishId":0,"sign":"c6fcd1935bc8dddfa8c6ff394def4b74"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_76633","angle":17.178187446152435,"lockFishId":0,"sign":"aa8f57ec39cf209b970d81ef4fdcb8a3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_76633","fishId":"374210","sign":"6d7addce07fca905a36e93243b771b1f"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_73840","fishId":"1169466","sign":"ccf0a8150e3ff954de20e2f332705993"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_75852","fishId":"1165458","sign":"9ad43e5bc8089be5fab27b99f5882ac4"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_76027","fishId":"1165458","sign":"5afbc7990659df28e231b635040d129a"}
+traceKind: 3
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_74016","fishId":"1171471","sign":"740e4700ad3a1759230c1767a4150b18"}
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_79265","angle":58.91953994846236,"lockFishId":0,"sign":"e68fbb800bfc4215961baead725f426c"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_79265","fishId":"10585302","sign":"96ee1cedafe9bbfcfc3603643108997e"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_79265","fishId":"1159446","sign":"283ec10825eb2daf6c077fb6eb3f5537"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_79460","angle":58.91953994846236,"lockFishId":0,"sign":"f38607198d2aaae18194c230fefafe8c"}
+traceKind: 2
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_79460","fishId":"10585302","sign":"64a444aa6583199e8b1f07be631bf9d9"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_79460","fishId":"1159446","sign":"2431e8a0474edd8792829a5b9134b4f1"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_80201","angle":50.159637073506644,"lockFishId":0,"sign":"7e8587f295e691fc63b4c0c48a8b5177"}
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_80569","angle":50.159637073506644,"lockFishId":0,"sign":"2ba677191f05031df0857c5ce61e8f6d"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_80201","fishId":"1011350","sign":"1f1748205025884e9bfb3daa69bacbe5"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_80201","fishId":"1017363","sign":"a99533802dbf9f260b6fc276347cfec3"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_80201","fishId":"1121371","sign":"e415ba5cf465aa20c9c0af05cf4bb095"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_80569","fishId":"1011350","sign":"7d1f383d9aa6cab0a43fdd3e3076d25d"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_80569","fishId":"1017363","sign":"65e46d594633edcdb56dce5023479163"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_80569","fishId":"1121371","sign":"b4165da465dee7f5ca4558a10f89b4dc"}
+traceKind: 3
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_81382","angle":55.092676424961084,"lockFishId":0,"sign":"a9f1042b02485ee25bdeffff8d833066"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_81382","fishId":"1159446","sign":"77ab11c1fb8e5850c28c8e281c49e8b2"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_82061","angle":65.26785632542365,"lockFishId":0,"sign":"b509e57c6a4c057c2143bff6bced9319"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_82061","fishId":"1159446","sign":"c616af29d8c54c660b96204c29994d0e"}
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_82466","angle":70.85854618447956,"lockFishId":0,"sign":"c470187c8f6344714c0b76b771b1a34c"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_82466","fishId":"1159446","sign":"6872ca6004c129be9646fbbbf6dfc1a1"}
+game_ping
+user_fire: {"userId":96,"chairId":1,"bulletKind":1,"bulletId":"1_83341","angle":81.83535801703331,"lockFishId":0,"sign":"21cd0198178e9eb633c09cedacaf3a4d"}
+catch_fish: {"userId":96,"chairId":1,"bulletId":"1_83341","fishId":"1159446","sign":"28d869ad6c3526812f1cb74d183943a5"}
+traceKind: 2
+traceKind: 2
+traceKind: 3
+game_ping
+traceKind: 3
+game_ping
+traceKind: 1
+game_ping
+traceKind: 1
+game_ping
+traceKind: 3
+traceKind: 3
+traceKind: 2
+game_ping
+traceKind: 4
+game_ping
+traceKind: 1
+game_ping
+traceKind: 1
+game_ping
+traceKind: 3
+traceKind: 1
+traceKind: 1
+traceKind: 1
+game_ping
+traceKind: 3
+game_ping
+traceKind: 3
+game_ping
+traceKind: 3
+game_ping
+traceKind: 2
+traceKind: 4
+traceKind: 3
+game_ping
+traceKind: 2
+game_ping
+traceKind: 2
+game_ping
+traceKind: 1
+game_ping
+traceKind: 1
+traceKind: 3
+game_ping
+traceKind: 3
+traceKind: 3
+game_ping
+traceKind: 3
+game_ping
+traceKind: 1
+game_ping
+traceKind: 2
+traceKind: 3
+exit: null
+UPDATE t_users SET gems =  10246 WHERE userid = 96
+UPDATE t_users SET power =  6 WHERE userid = 96
+UPDATE t_users SET roomid = null WHERE userid = "96"
+DELETE FROM t_rooms WHERE id = '200195'
+disconnect: server namespace disconnect
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+game_ping
+disconnect: transport close
